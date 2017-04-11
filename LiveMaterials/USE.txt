@@ -1,0 +1,30 @@
+To make a GameObject use a Live Material you just need to add the component "Live Material",
+inside the category "marsh", and set up the textures and materials using the user-friendly custom editor.
+
+-----------------------------------------------------------------------------------------------------
+
+Here is a brief explanation about some elements of the custom editor:
+
+	> Affect GI — if realtime GI is enabled and object is static, enabling this will make
+		      the changes affect the lighting.
+
+	> Material debugging — Prints warnings whenever something goes wrong. This should be enabled
+			       in case you're having trouble.
+
+	> Extense debugging — This will only show up if 'Material debugging' is enabled. Prints
+			      not only warnings but also overall information about what's going on.
+			      This will saturate your console, so it should only be enabled if you
+			      don't have a clue about what's failing.
+
+	> Looping — If enabled, material animations won't stop looping unless you do it manually.
+
+	> Play on awake — If enabled, all textures will start it's animation as soon as the game's started.
+
+	> Update when offscreen — If enabled, materials will play always even when camera is not rendering the object.
+				  If you have quite a few Live Materials, disabling this may help improve performance,
+				  but may also cause unexpected results, especially with materials affecting GI.
+
+	> Play backwards — Pretty self-explanatory.
+
+	> Fallback texture — When a texture has no animation loaded ( or it has been cleared through code ) Fallback texture
+			     will remain. This is useful if you are loading the animations at runtime.

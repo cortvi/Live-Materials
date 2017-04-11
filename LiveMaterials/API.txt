@@ -1,0 +1,72 @@
+Here are all the public non-static functions to control
+the animations on your Live Materials.
+
+*Avoiding the use of this API and making direct changes may cause the code to break*
+*If this happens, just delete the script and replace it with a new one*
+
+
+	> Play ( params int[] index ) — starts playing all texture animations on given materials.
+		.index — All the index of the materials you want to start playing.
+			 If none index is given, all materials will start playing.
+
+
+
+	> Pause ( params int[] index ) — pauses all texture animations on given materials.
+		.index — All the index of the materials you want to pause.
+			 If none index is given, all materials will pause.
+
+
+
+	> Stop ( params int[] index ) — same as 'Pause' but it also resets the animation.
+
+
+
+	> SetFPS ( float fps, int matID, params int[] txID ) — sets the framerate for the given animation
+		.fps — the framerate to assing.
+		.matID — The material ID as shown in the inspector.
+		.txID — All thhe textures ID as shown in the inspector.
+			If none ID is given all textures within the material will change their framerate.
+
+
+
+	> GoFrame ( int frame, int matID, params int[] txID ) — jumps into the given frame
+		.frame — the frame to jump into.
+		.matID — The material ID as shown in the inspector.
+		.txID — All the texture ID as shown in the inspector.
+			If none ID is given all textures within the material will jump into given frame.
+
+
+
+	> LoadAnimation ( Texture2D[] animation, int matID, int txID ) — Loads an animation into a material texture.
+		.animation — The array of Texture2D to be loaded as the frames of the animation.
+		.matID — The material ID as shown in the inspector.
+		.txID — The texture ID as shown in the inspector.
+
+
+
+	> ClearTexture ( int matID, int txID ) — Deletes the animation stored in the given texture.
+		.matID — The material ID as shown in the inspector.
+		.txID — The texture ID as shown in the inspector.
+		*NOTE: cleaning the animation will cause the texture fallback to show up.
+
+
+
+	> SetTextureState ( bool enabled, int matID, int txID ) — Sets the state ( enabled / disabled ) of a texture.
+		*NOTE: Disabling a texture will keep its animation and show up fallback texture. 
+		       If you enable a texture it will play if its material is already playing.
+		.enabled — Whether to enable or disable the texture.
+		.matID — The material ID as shown in the inspector.
+		.txID — The texture ID as shown in the inspector.
+
+
+
+	> ConfigMaterial ( int matID, bool loop, bool playOnAwake, bool offscreenUpdate, bool backwards ) — Sets the global properties of a Live Material.
+		.matID — The material ID as shown in the inspector.
+		.loop — Whether the animation keeps looping.
+		.playOnAwake — Whether the material starts playing when GameObject is created.
+		.offscreenUpdate — Whether the material keeps playing when offscreen.
+		.backwards — Whether material animations play backwards.
+
+
+	> IsPlaying ( int matID ) — check if given material is currently playing.
+		.matID — The material ID as shown in the inspector.
