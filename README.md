@@ -10,7 +10,9 @@ Here's an old [video](https://www.youtube.com/watch?v=PS0Es34NoaY) to show off t
 With the release of Unity 5.6 they included the new video player so I guess this makes my asset quite deprecated so I'm just sharing it here in case anyone finds it useful.
 
 # License
-You are free to do whatever you want with this: download, use for commercial and non-commercial, fork the repo, etc... As long as you credit me as the MIT License stands.
+You are free to do whatever you want with this:
+download, fork, commercial and non-commercial use, etc...
+As long as you credit me as the MIT License stands.
 
 # Use
 Just clone the **LiveMaterials** folder wherever in your Unity project and read the files inside it.
