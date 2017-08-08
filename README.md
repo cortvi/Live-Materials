@@ -16,3 +16,6 @@ You are free to modify the code and fork this repo.
 
 # Use
 Just clone the **LiveMaterials** folder wherever in your Unity project and read the files inside it.
+
+# To-Do
+Optimization: Use the new TextureArray shader feature.
