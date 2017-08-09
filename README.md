@@ -1,4 +1,4 @@
-# Live Materials
+# Live Materials 1.2
 My alternative to Unity movie textures before Unity 5.6  
 It has been tested in Unity 5.0, 5.4 and 5.5.  
 Please notify any problem with further versions.
